@@ -3,6 +3,7 @@ import numpy as np
 from numpy.random import default_rng
 import argparse
 from tqdm import tqdm
+from scipy import stats 
 
 # Default input and output filenames
 DEFAULT_INPUT_FILE = 'ddf--datapoints--population--by--income_groups--age--gender--year.csv'
@@ -118,3 +119,34 @@ if __name__ == '__main__':
     print(df_messy.mean(numeric_only=True))
  
     print(df_messy.isnull().sum())
+
+    print(df_messy.describe())
+
+    duplicates = df_messy.duplicated().sum()
+
+    print(f"Number of duplicate rows: {duplicates}")
+df = pd.read_csv('messy_population_data.csv')
+
+print(df.dtypes)
+# Check unique values for income_groups
+print(df['income_groups'].unique())
+
+# Check unique values for gender
+print(df['gender'].unique())
+
+# Check unique values for year
+print(df['year'].unique())
+# Check for leading/trailing spaces in income_groups
+print(df['income_groups'].str.strip().unique())
+
+# Check for leading/trailing spaces in year
+print(df['year'].str.strip().unique())
+
+# Check for non-integer ages
+print(df['age'].unique())
+
+# Check for unexpected gender values
+print(df['gender'].unique())
+
+
+   
