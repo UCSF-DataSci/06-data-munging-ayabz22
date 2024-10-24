@@ -1,0 +1,31 @@
+# Data Cleaning Project: Population Dataset
+
+## 1. Initial State Analysis 
+
+### Dataset Overview
+- **Name**: messy_population_data.csv
+- **Rows**: 125,718
+- **Columns**: 5
+
+### Column Details
+
+| Column Name     | Data Type | Non-Null Count | Unique Values | Mean           |
+|-----------------|-----------|----------------|---------------|----------------|
+| income_groups   | object    | 119,412        | 8             | N/A            |
+| age             | float     | 119,495        | 101           | 50.001         |
+| gender          | float     | 119,811        | 3             | N/A            |
+| year            | object    | 125,718        | 170           | N/A            |
+| population      | object    | 125,718        | 114926        | 1.579          |
+
+### Identified Issues
+
+1. **Missing Values**
+   - Description: There are missing values as NaN
+   - Affected Column(s): income groups, age, gender
+   - Example: Row 6306 has NaN in income_groups, Row 6223 has a NaN in age
+   - Potential Impact: If left uncleaned they can affect our conclusions because it can result in a skew 
+
+2. **[Next Issue]**
+   - ...
+
+[Add more issues as needed]

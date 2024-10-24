@@ -104,11 +104,17 @@ if __name__ == '__main__':
     print(f"\nMessy dataset saved as '{output_file}'")
 
     # Hint: Uncomment for insights
-    # print("\nClean dataset info:")
-    # print(df_clean.info())
+    print("\nClean dataset info:")
+    print(df_clean.info())
 
-    # print("\nMessy dataset info:")
-    # print(df_messy.info())
+    print("\nMessy dataset info:")
+    print(df_messy.info())
 
-    # print("\nSample of messy data:")
-    # print(df_messy.sample(10))
+    print("\nSample of messy data:")
+    print(df_messy.sample(10))
+
+    print(df_messy.nunique())
+
+    print(df_messy.mean(numeric_only=True))
+ 
+    print(df_messy.isnull().sum())
